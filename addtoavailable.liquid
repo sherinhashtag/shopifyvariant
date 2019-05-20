@@ -1,0 +1,12 @@
+Shopify.arrayIncludes = function(e, t) {
+    for (var n = 0; n < e.length; n++)
+        if (e[n] == t)
+            return !0;
+    return !1
+};
+
+Shopify.uniq = function(e) {
+    for (var t = [], n = 0; n < e.length; n++)
+        Shopify.arrayIncludes(t, e[n]) || t.push(e[n]);
+    return t
+};
